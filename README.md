@@ -1,5 +1,9 @@
 # DARTH-VADEr
 
+<p align="center">
+<img src="imgs/Dr_VADEr.png" width = 300>
+</p>
+
 **Ave**, or perhaps more fittingly - *Hello there* vivacious voracious visionary! Your presence here indicates a discontentment with status quo and a yearning for an improvement in polygenic risk scoring. Here in this hallowed repository, it is my aim to broaden the community's genomic **Vision** with the introduction of our joint DARTH-VADEr framework. 
 
 VADEr (or the **V**ision **A**dapted **D**isease **E**lucidating t**r**ansformer) is a transformer-based architecture, that aims to leverage the parallel properties genomic data 
@@ -15,9 +19,6 @@ problem in genotype-to-phenotype modeling.
 
 Now with that having been said, *rise as my apprentice* my fellow SNP lord, and bring order to genotype-phenotype galaxy. Until we eet again in another repository, I wish you good fortune in the analyses to come (...*though in my experience, there's no such thing as luck*).
 
-<p align="center">
-<img src="imgs/DR_VADEr.png" width = 300>
-</p>
 
 ## Rise As My Apprentice: Training VADEr
 
