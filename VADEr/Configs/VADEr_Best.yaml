@@ -1,0 +1,54 @@
+dataset:
+  SNP_set: ../../Data/snps/extract/PC/ellipse-ukb.5e-04.extract.txt
+  age_train_stats: ../../Data/TrainingSetStatistics/ELLIPSE/TrainingSetAgeStats.pkl
+  cached_training_feather_path: ../../Data/FeatherWritePath/PC/No_Sparsity_Threshold/5e-4/Train_Clumped
+  cached_val_feather_path: ../../Data/FeatherWritePath/PC/No_Sparsity_Threshold/5e-4/Val_Clumped
+  complete_dataset_file_path: ../../Data/ellipse/table/ellipse-ukb.5e-04.zscored.feather
+  consistent_maf_SNPs: ../../Data/snps/extract/PC/QCed_SNP_Sets/LD_Clumped_r2_0.8.txt
+  patch_mapping_path: ../../Data/Patches_To_Features/250kb/5e-04_250kb_DistanceClumps.pkl
+  patch_to_chrom_mapping: ../../Data/Patch_To_Chrom_Mapping/250kb/5e-04_250kb_PositionalMaps.tsv
+  pheno_path: ../../Data/PhenosAndIDs/PC/ellipse.pheno.tsv
+  train_IDs: ../../Data/PhenosAndIDs/PC/ellipse_train_ids.txt
+  val_IDs: ../../Data/PhenosAndIDs/PC/ellipse_val_ids.txt
+model_params:
+  age_inclusion: false
+  aggregation: cls
+  attention: MHA-LT
+  cls_representation: learnable
+  mlp_scale: 4
+  mlp_method: SwiGLU
+  model_dim: 768
+  model_dropout: 0.2
+  non_linear_patch_projection: true
+  num_attention_heads: 12
+  num_transformer_blocks: 12
+  patch_layer_norm: false
+  patch_projection_dropout: 0.2
+  num_registers: 8
+  prediction_dims:
+    disease: 1
+optimizer_params:
+  betas:
+  - 0.9
+  - 0.99
+  optimizer: AdamW
+  weight_decay: 0.1
+train_and_checkpoint:
+  batch_size: 4
+  checkpoint_freq_method: Epochs
+  checkpoint_frequency: 1
+  checkpoint_metric: Val_AUC
+  gradient_accumulation: 256
+  gradient_clipping: 10
+  k_checkpoint: 10
+  loss: st_cross_entropy
+  lr: 8.0e-05
+  masking: null
+  model_checkpoint_path: ../../Models/PC/5e-4/67_VADEr_bs4096_lr8e-05_sc-cosine_with_warmup_wu95_clip10_dim768_mlp4_bl12_he12_pd0.2_md0.2_ag-cls_cls-learnable_act-True_at-MHA-LT_nr-8_ffAct-SwiGLU_mask-None_spt-False_pln-False_wd0.1_b2-0.99_nm-z_clumped
+  num_training_steps: 115
+  num_workers: 8
+  scheduler: cosine_with_warmup
+  scheduler_warmup_steps: 95
+  shift_patches: false
+  training_summary_path: ../../CSV_Output_Files/PC/5e-4/67_VADEr_bs4096_lr8e-05_sc-cosine_with_warmup_wu95_clip10_dim768_mlp4_bl12_he12_pd0.2_md0.2_ag-cls_cls-learnable_act-True_at-MHA-LT_nr-8_ffAct-SwiGLU_mask-None_spt-False_pln-False_wd0.1_b2-0.99_nm-z_clumped.tsv
+
