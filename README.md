@@ -6,7 +6,7 @@
 
 **Ave**, or perhaps more fittingly - *Hello there* vivacious voracious visionary! Your presence here indicates a discontentment with status quo and a yearning for an improvement in polygenic risk scoring. Here in this hallowed repository, it is my aim to broaden the community's genomic **Vision** with the introduction of our joint DARTH-VADEr framework. 
 
-VADEr (or the \underline{V}ision **A**dapted **D**isease **E**lucidating t**r**ansformer) is a transformer-based architecture, that aims to leverage the parallel properties genomic data 
+VADEr (or the <ins>V</ins>ision **A**dapted **D**isease **E**lucidating t**r**ansformer) is a transformer-based architecture, that aims to leverage the parallel properties genomic data 
 exhibits with the data modalities of NLP and CV, to improve polygenic risk scoring from SNP-level data. Advancement on this frontier though, without deriving interpretable insights
 of identified drivers of disease risk, may be seen as conceptually myopic, missing opportunities to elucidate novel genomic contributions to disease risk, impeding model trustworthiness,
 and ultimately prcluding clinical adoption. Thus, to allay these potential concerns and broaden the applicability and appeal of this work, we jointly introduce a paired attention-based
