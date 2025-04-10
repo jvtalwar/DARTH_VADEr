@@ -1,0 +1,5 @@
+# VADEr Feature Sets:
+
+This folder contains the SNPs/features used for VADEr training and inference, with all features defined, formatted, and dataset harmomized with [GRIEVOUS](https://github.com/jvtalwar/GRIEVOUS). All features are in GRCh37. The best feature set (i.e., the one reported in our paper) is **5e-4_Best.tsv** corresponding to the set of [Conti *et al.*](https://www.nature.com/articles/s41588-020-00748-0) summary statistic SNPs with a p-value < 5e-4 after QC and clumping.
+
+**Note**: For a given feature CHR:POS:REF:ALT, the feature orientation here for VADEr is oriented to the REF allele. So for example, the feature 6:29550416:G:A is oriented towards the G allele (i.e., the feature is a representation of the count of G alleles here, though this value is z-scored according to the training set distribution to improve training convergence).
