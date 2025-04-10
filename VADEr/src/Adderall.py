@@ -5,22 +5,8 @@ Created on August 9, 2022 at 21:53:50/Reformatted on February 23, 2024
 About: Adderall.py builds a multi-task Vision Adapted/Agnostic Disease Elucidating transforme-r (VADEr) for complex disease risk prediction. 
 It is designed to take in genomic patches, with patches orderd by CHR-Base position (i.e., patch/clump 1 should equate to the lowest numbered
 CHR in the dataset and all base pairs should fall in the patch radius as set during preprocessing) and return unactivated outputs for the 
-multi-task prediction head. This is a pre layer-norm transformer and thus should be more stable during training than post-LN transformers. 
-Task specific (or custom) losses, metrics, and activated predictions are assumed to be handled in training/fine-tuning/evaluation scripts 
-that call the model. 
-
-NOTES: 
-
-    1) Initialization of weights is left with PyTorch defaults for now given some anecdotal evidence for kaiming uniform (pytorch default) 
-    initialization outperforming/performing comparably with xavier uniform the transformer default. If want to set weights can apply it to 
-    the model subsequent to intialization with:
-
-    model = VADEr(...)
-    for p in model.parameters():
-        if p.dim() > 1:
-            nn.init.xavier_uniform_(p)
-    
-    2) If unstable training or loss/AUC plateaus adding LR decay and potentially gradient clipping at a global norm of 1 may help.
+multi-task prediction head. Task specific (or custom) losses, metrics, and activated predictions are assumed to be handled in 
+training/fine-tuning/evaluation scripts that call the model. 
 '''
 
 import torch.nn as nn
