@@ -18,5 +18,4 @@ For full details on how to train **VADEr** from scratch (including the wide rang
 
 ## Citation
 
-If you found our **DARTH-VADEr** framework in anyway helpful in your research, don't forget to cite our paper: Vision Transformer-based Polygenic Risk Model (VADEr) Reveals Genetic Heterogeneity Underlying Prostate Cancer Risk (link to our preprint coming soon!)
-
+If you found our **DARTH-VADEr** framework in anyway helpful in your research, don't forget to cite our paper: [VADEr: Vision Transformer-Inspired Framework for Polygenic Risk Reveals Underlying Genetic Heterogeneity in Prostate Cancer](https://www.medrxiv.org/content/10.1101/2025.05.16.25327672v1)
