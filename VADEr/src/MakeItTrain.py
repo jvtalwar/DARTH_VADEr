@@ -28,7 +28,7 @@ get_cosine_with_hard_restarts_schedule_with_warmup, get_constant_schedule)
 from VADErData import SNP_Dataset
 from VADErDataUtils import GenerateChromosomePatchMask
 from YuriTheTrainerWhoTrains import Trainer
-from Adderall import VADEr
+from vader import VADEr
 
 
 '''
