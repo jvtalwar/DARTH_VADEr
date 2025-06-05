@@ -62,7 +62,11 @@ def LoadAndProcessGenotypes(snpSubsetPath: str, validMafSnpsPath: str, featherFi
     # Get snp IDs from list
     snpIDs = list(set(pd.read_csv(snpSubsetPath, header = None, dtype = str)[0].tolist()))
     invalidSNPPath = "{}".format(os.path.join("/", *snpSubsetPath.split("/")[:-1], "InvalidSNPs.txt"))
-    invalidSNPs = pd.read_csv(invalidSNPPath, header = None, dtype = str)[0].tolist()
+
+    try: 
+        invalidSNPs = pd.read_csv(invalidSNPPath, header = None, dtype = str)[0].tolist()
+    except: #handle case when user does not provide invalid SNPs file 
+        invalidSNPs = list()
 
     if len(invalidSNPs) >= 0:
         logger.info("{} SNPs exist across the full 5e-4 dataset with INF or NULL values. Removing these now... Unremoved SNP set size is {}".format(len(invalidSNPs), len(snpIDs)))
