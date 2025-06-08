@@ -51,7 +51,7 @@ class VADEr(nn.Module):
     def __init__(self, patchSizes: dict, modelDim: int, mlpDim: int, depth: int, attnHeads: int, attnHeadDim: int, multitaskOutputs: dict, 
                  clumpProjectionDropout: float = 0.0, dropout: float = 0.0, ageInclusion: bool = False, aggr: str = "cls", context = "learnable",
                  patchProjectionActivation: bool = False, patchLayerNorm = False, trainingObjective = "cross_entropy", attention = "MHA", 
-                 numRegisters = 0, ffActivation = "GELU", **kwargs):
+                 numRegisters = 0, ffActivation = "SwiGLU", **kwargs):
         super(VADEr, self).__init__() 
         
         assert context in {"learnable", "global", None}
@@ -75,7 +75,6 @@ class VADEr(nn.Module):
                 patchProj = [nn.LayerNorm(v)] + patchProj
 
             if patchProjectionActivation:
-                #Step 1: obtain latest predictions; Step 2: switch for GeLU vs. SwiGLU; Step 3: Implement SwiGLU
                 patchProj.append(nn.GELU())
                 
             if len(patchProj) == 1: #added for backwards model compatability 
