@@ -7,7 +7,7 @@
 #########################################################################
 # @author: James V. Talwar
 # ABOUT: This script performs clumping for VADEr feature set reduction (as described in paper).
-# USAGE: sbatch -p carter-gpu -A carter-gpu --job-name=1000G_Clump_PC Clump_1000G.sh
+# USAGE: sbatch -p carter-compute --job-name=1000G_Clump_PC Clump_1000G.sh
 
 start_time=$SECONDS # track script run time (optional)
 
