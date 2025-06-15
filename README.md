@@ -14,7 +14,7 @@ Now with that having been said, *rise as my apprentice* my fellow **SNP lord**, 
 
 ## Getting Started With DARTH-VADEr
 
-For full details on how to train **VADEr** from scratch (including the wide range of supported architectural adaptations, data augmentations, custom loss formulations, and training hyperparameters supported), conducting inference with **VADEr** to generate PRSs for your dataset of interest, and computing **DARTH** scores for a **VADEr** model, jump on  over to our [documentation](https://github.com/jvtalwar/DARTH_VADEr/wiki) (currently still in progress).
+For full details on how to train **VADEr** from scratch (including the wide range of supported architectural adaptations, data augmentations, custom loss formulations, and training hyperparameters supported), conducting inference with **VADEr** to generate PRSs for your dataset of interest, and computing **DARTH** scores for a **VADEr** model, jump on  over to our [documentation](https://github.com/jvtalwar/DARTH_VADEr/wiki).
 
 ## Citation
 
