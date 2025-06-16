@@ -385,7 +385,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     path_args = parser.add_argument_group("Input/output options:")
-    path_args.add_argument('--config_path', type=str, help='Path to config .yaml file to train/hyperoptimize a VADEr model')
+    path_args.add_argument('--config_path', type=str, help='Path to config .yaml file to train a VADEr model')
     args = parser.parse_args()
 
     main(args)
