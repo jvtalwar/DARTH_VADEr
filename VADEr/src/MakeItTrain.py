@@ -385,10 +385,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     path_args = parser.add_argument_group("Input/output options:")
-    path_args.add_argument('--config_path', type=str, help='Path to config .yaml file to train/hyperoptimize an InSNPtion model')
-    #path_args.add_argument("--training_objective", type = str, help = """Training Objective: valid options - {'MT', 'ST', 'SupConPre', 'SupConLinear'}. MT implements multi-task learning (Disease status and ancestry). 
-    #                       ST implements single-task learning for disease risk prediction only. SupConvPre implements contrastive loss as defined by the supervised contrastive loss paper. SupConvLinear trains a linear
-    #                       classifier on top of a supervised contrastive VADEr pretrained model with the projection network discarded (in accordance with the details of the paper).""")
+    path_args.add_argument('--config_path', type=str, help='Path to config .yaml file to train/hyperoptimize a VADEr model')
     args = parser.parse_args()
 
     main(args)
