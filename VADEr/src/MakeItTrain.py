@@ -381,8 +381,6 @@ def main(args):
     destroy_process_group()
 
 if __name__ == "__main__":
-    #logging.basicConfig(level = logging.INFO)
-
     parser = argparse.ArgumentParser()
     path_args = parser.add_argument_group("Input/output options:")
     path_args.add_argument('--config_path', type=str, help='Path to config .yaml file to train a VADEr model')
