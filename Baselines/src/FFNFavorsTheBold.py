@@ -7,7 +7,7 @@ Forward Network (FCFFN) config specified single model configuration or performs 
 performance and model checkpointing are performed and saved in the paths specified in the config file. For hyperoptimization, studies are saved in rdb format which 
 allows for multi-gpu training and for resumption of studies w/o having to start from scratch. 
 
-Example Usage: python ./FFNFavorsTheBold.py --config_path /cellar/users/jtalwar/projects/BetterRiskScores/InSNPtion/Galbatorix/InSNPtion2/Configs/DRIVE/5e-8/LD_MTL_5e-8.yaml --training_objective MTL/ST
+Example Usage: python ./FFNFavorsTheBold.py --config_path ../Configs/DRIVE/5e-8/LD_MTL_5e-8.yaml --training_objective MTL/ST
 
 """
 
