@@ -31,7 +31,7 @@ from joblib import dump
 import yaml 
 import sys
 from NeverArgueWithTheDataloader import *  
-from PrepareForTrouble import * #for auc - Calc_ROC function
+from AUC_Utils import Calc_ROC
 import optuna
 import joblib
 import logging
