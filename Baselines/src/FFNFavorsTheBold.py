@@ -534,14 +534,14 @@ if __name__ == "__main__":
         complete_trials = [t for t in study.trials if t.state == optuna.trial.TrialState.COMPLETE]
         
         logger.info("Study statistics: ")
-        logger.info("  Number of finished trials: ", len(study.trials))
-        logger.info("  Number of pruned trials: ", len(pruned_trials))
-        logger.info("  Number of complete trials: ", len(complete_trials))
+        logger.info(f"  Number of finished trials: {len(study.trials)}")
+        logger.info(f"  Number of pruned trials: {len(pruned_trials)}")
+        logger.info(f"  Number of complete trials: {len(complete_trials)}")
 
         logger.info("Best trial:")
         trial = study.best_trial
 
-        logger.info("  Value: ", trial.value)
+        logger.info(f"  Value: {trial.value}")
 
         logger.info("  Params: ")
         for key, value in trial.params.items():
