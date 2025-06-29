@@ -1,0 +1,35 @@
+General:
+    batchSize: 256
+    optimizer: AdamW
+    learningRate: 0.0001 
+    epochs: 100
+    hyperOptimize: True  #Flag specifying whether or not to run hyperparameter optimization or default to specified config model parameters 
+    maxLayers: 8 
+    pathForCSVSummary: ../../CSV_Output_Files/PC/BaselineClassifiers/5e-7/FCFFN
+    modelCheckpointingPath: ../../Models/PC/BaselineClassifiers/5e-7/FCFFN
+    hyperOptimizeTrials: 50 #How many trials want optuna to run per GPU (e.g., 50 here for 2 GPUs equates to 100 total trials)
+    hyperOptimizeJobs: 1 #How many models to run concurrently (per GPU) - suggest keeping at 1 to prevent OOM errors 
+    numWorkers: 4
+    studyName: FC_FFN_5e-7
+    sqlPath: ../../Studies/PC/BaselineClassifiers/5e-7/FCFFN #Path and file name for Optuna Study 
+    
+ModelParams:  
+    ageInclusion: False
+    layerWidths: [1024,256,128]
+    multiTaskOutputs: [1] 
+    dropout: 0.5
+    activation: GELU
+    weightedTask: {"PC":0.5, "Ethn":0.5} #how much want to weight the loss functions against one another if employ MTL --> baseline weight them equally
+    weightedLoss: False #Whether or not want to weight the loss f(x)s
+    weights: {"PC":[0.25, 0.75], "Ethnicity":[0.3,0.3,0.2,0.2]} #How much to weight each class per loss function when weightedLoss above == True
+    H1_Dimension_Upper_Bound: 4096  
+    
+Dataloader:
+    FeatherPath: ../../Data/ellipse/table/ellipse-ukb.5e-04.zscored.feather
+    FeatherWritePath: ../../Data/FeatherWritePath/PC/FCFFN/5e-7 
+    PhenoPath: ../../Data/PhenosAndIDs/PC/ellipse.pheno.tsv
+    TrainIDs: ../../Data/PhenosAndIDs/PC/ellipse_train_ids.txt
+    ValIDs: ../../Data/PhenosAndIDs/PC/ellipse_val_ids.txt
+    SNP_Set: ../../Data/snps/extract/PC/ellipse-ukb.5e-07.extract.txt 
+    AgeTrainStats: ../../Data/TrainingSetStatistics/ELLIPSE/TrainingSetAgeStats.pkl
+    ConsistentMafSNPs: ../../Data/snps/extract/PC/QCed_SNP_Sets/LD_Clumped_r2_0.8.txt
