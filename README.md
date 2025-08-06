@@ -2,7 +2,7 @@
 
 <p align="center">
 <span style="font-size:25px; font-weight:bold;">
-        Tracking DARTH Scores in Independent Cohort.
+        Tracking DARTH Scores in Independent Cohort:
     </span><br>
     <img src="imgs/LS_Final_Epoch_Fit_rs13_nn10_md0.1_DARTH_VADEr.gif" width = 600>
 </p>
