@@ -1,7 +1,10 @@
 # DARTH-VADEr
 
 <p align="center">
-<img src="imgs/LS_Final_Epoch_Fit_rs13_nn10_md0.1_DARTH_VADEr.gif" width = 600>
+<span style="font-size:18px; font-weight:bold;">
+        Tracking DARTH scores: Each point = individual DARTH score signature in independent cohort (not seen in training).
+    </span><br>
+    <img src="imgs/LS_Final_Epoch_Fit_rs13_nn10_md0.1_DARTH_VADEr.gif" width = 600>
 </p>
 
 [*I've been waiting for you, researcher... we meet (again) at last!*](https://www.youtube.com/watch?v=BT1f64RHmp0) Your presence here indicates a discontentment with status quo and a yearning for an improvement in polygenic risk scoring. Here in this hallowed repository, it is my aim to broaden the community's genomic **Vision** with the introduction of the **DARTH-VADEr** framework.
