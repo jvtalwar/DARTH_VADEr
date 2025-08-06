@@ -1,6 +1,6 @@
 # DARTH-VADEr
 
-<h3 align="center">Tracking DARTH Scores in Independent Cohort:</h3>
+<h3 align="center">Tracking DARTH Scores and Genomic Risk Signatures in Independent Dataset:</h3>
 <p align="center">
     <img src="imgs/LS_Final_Epoch_Fit_rs13_nn10_md0.1_DARTH_VADEr.gif" width="600">
 </p>
