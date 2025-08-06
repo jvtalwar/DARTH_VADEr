@@ -1,7 +1,7 @@
 # DARTH-VADEr
 
 <p align="center">
-<img src="imgs/Dr_VADEr.png" width = 300>
+<img src="imgs/LS_Final_Epoch_Fit_rs13_nn10_md0.1_DARTH_VADEr.gif" width = 300>
 </p>
 
 [*I've been waiting for you, researcher... we meet (again) at last!*](https://www.youtube.com/watch?v=BT1f64RHmp0) Your presence here indicates a discontentment with status quo and a yearning for an improvement in polygenic risk scoring. Here in this hallowed repository, it is my aim to broaden the community's genomic **Vision** with the introduction of the **DARTH-VADEr** framework.
@@ -19,3 +19,7 @@ For full details on how to train **VADEr** from scratch (including the wide rang
 ## Citation
 
 If you found our **DARTH-VADEr** framework in anyway helpful in your research, don't forget to cite our paper: [VADEr: Vision Transformer-Inspired Framework for Polygenic Risk Reveals Underlying Genetic Heterogeneity in Prostate Cancer](https://www.medrxiv.org/content/10.1101/2025.05.16.25327672v1.full.pdf)
+
+<p align="center">
+<img src="imgs/Dr_VADEr.png" width = 300>
+</p>
